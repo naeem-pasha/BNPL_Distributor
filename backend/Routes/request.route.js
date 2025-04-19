@@ -9,6 +9,7 @@ const {
   updateDate,
   acceptDelivery,
   sendDeliveryConfirmationToUser,
+  getDistributerDetail,
 } = require("../controller/request.control");
 const authMiddleware = require("../middleware/authmiddleware");
 
@@ -31,5 +32,7 @@ route.put("/send-invoice-user/:id", sendInvoiceToUser);
 route.put("/send-delivery-letter-to-user/:id", sendDeliveryConfirmationToUser);
 
 route.put("/user-accept-delivery/:id", acceptDelivery);
+
+route.get("/get-distributer-detail/:id", getDistributerDetail);
 
 module.exports = route;

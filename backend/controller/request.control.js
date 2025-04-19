@@ -7,7 +7,7 @@ const axios = require("axios");
 
 const createDistributer = async (req, res) => {
   try {
-    const { name, email, phoneNo } = req.body;
+    const { name, email, phoneNo, address } = req.body;
 
     const existingUser = await UserDistributer.findOne({
       $or: [{ phoneNo }, { email }], // Match either phoneNo or email
@@ -59,6 +59,7 @@ const createDistributer = async (req, res) => {
       email,
       phoneNo,
       password: hashedPassword,
+      address,
     });
     await newUser.save();
 
@@ -374,7 +375,35 @@ const acceptDelivery = async (req, res) => {
   }
 };
 
-module.exports = acceptDelivery;
+const getDistributerDetail = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedId = `0${id}`;
+    const distributer = await UserDistributer.findOne({
+      phoneNo: updatedId,
+    }).select("-password");
+
+    if (!distributer) {
+      return res.status(404).json({
+        success: false,
+        message: "Distributer not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Distributer fetched successfully",
+      data: distributer,
+    });
+  } catch (error) {
+    console.error(error, `error in getDistributerDetail`);
+    return res.status(500).json({
+      success: false,
+      message: "Error while getting distributer details",
+      error: error.message,
+    });
+  }
+};
 
 module.exports = {
   allRequest,
@@ -386,4 +415,5 @@ module.exports = {
   updateDate,
   acceptDelivery,
   sendDeliveryConfirmationToUser,
+  getDistributerDetail,
 };

@@ -90,11 +90,7 @@ const MotorcycleDashboard = () => {
           description: "Successfully send offer to the customer.",
           variant: "default",
         });
-
-        setTimeout(() => {
-          window.location.reload();
-        }, 3000);
-        console.log("Confirmation request sent successfully:", result.data);
+        window.location.reload();
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {

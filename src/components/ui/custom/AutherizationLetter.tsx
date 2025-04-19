@@ -49,7 +49,7 @@ export default function DeliveryAuthorization({
               </div>
               <div className="flex gap-2">
                 <span className="font-semibold w-20">From:</span>
-                <span>Megzap Bank Ltd.</span>
+                <span>Meezan Bank Ltd.</span>
               </div>
             </div>
           </div>
@@ -61,11 +61,15 @@ export default function DeliveryAuthorization({
             Re: Authorization to Deliver the Goods
           </h3>
           <p className="text-gray-600 mb-4">
-            With reference to the Sales Receipt Number MBL/2020/xxx, dated
-            <span className="font-semibold"> 06th October 2020</span>, we hereby
-            confirm its receipt and hereby authorize you as MBL's agent to take
-            possession of the Goods and deliver it to our customer as per
-            following details:
+            With reference to the Sales Receipt Number {data?._id.split("-")[0]}
+            , dated
+            <span className="font-semibold">
+              {" "}
+              {data?.updatedAt.split("T")[0]}
+            </span>
+            , we hereby confirm its receipt and hereby authorize you as MBL's
+            agent to take possession of the Goods and deliver it to our customer
+            as per following details:
           </p>
         </div>
 
@@ -122,7 +126,7 @@ export default function DeliveryAuthorization({
           <div className="text-right">
             <p className="font-semibold">For and on behalf of</p>
             <p className="text-lg font-bold text-gray-700">
-              Megzap Bank Limited
+              Meezan Bank Limited
             </p>
           </div>
         </div>

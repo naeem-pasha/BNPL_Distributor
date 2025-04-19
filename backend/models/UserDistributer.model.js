@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       trime: true,
     },
+    address: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

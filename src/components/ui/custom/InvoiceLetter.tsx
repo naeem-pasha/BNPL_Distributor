@@ -83,7 +83,7 @@ const InvoiceLetter = ({ data }: DeliveryAuthorizationProps) => {
               <p>Regards</p>
               <div className="mt-8">
                 <p>____________________</p>
-                <p className="font-bold">Megzap Bank</p>
+                <p className="font-bold">meezan Bank</p>
               </div>
             </div>
 
