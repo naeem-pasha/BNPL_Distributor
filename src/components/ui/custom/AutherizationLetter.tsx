@@ -61,12 +61,6 @@ export default function DeliveryAuthorization({
             Authorization to Deliver the Bike
           </h3>
           <p className="text-gray-600 mb-4">
-            With reference to the Sales Receipt Number {data?._id.split("-")[0]}
-            , dated
-            <span className="font-semibold">
-              {" "}
-              {data?.updatedAt.split("T")[0]}
-            </span>
             It is to inform you that MBL after purchasing a bike from Atlas sold
             it to one of its customer. After reviewing the details mentioned
             below, kindly handover this bike to this customer.
