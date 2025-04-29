@@ -58,7 +58,7 @@ export default function DeliveryAuthorization({
         {/* Subject Section */}
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-4 border-b-2 border-dashed pb-2">
-            Re: Authorization to Deliver the Goods
+            Authorization to Deliver the Bike
           </h3>
           <p className="text-gray-600 mb-4">
             With reference to the Sales Receipt Number {data?._id.split("-")[0]}
@@ -67,9 +67,9 @@ export default function DeliveryAuthorization({
               {" "}
               {data?.updatedAt.split("T")[0]}
             </span>
-            , we hereby confirm its receipt and hereby authorize you as MBL's
-            agent to take possession of the Goods and deliver it to our customer
-            as per following details:
+            It is to inform you that MBL after purchasing a bike from Atlas sold
+            it to one of its customer. After reviewing the details mentioned
+            below, kindly handover this bike to this customer.
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function DeliveryAuthorization({
           </div>
           <div className="space-y-2">
             <div className="flex gap-2">
-              <span className="font-semibold w-32">Buyer CXUC Number:</span>
+              <span className="font-semibold w-32">Buyer CNIC Number:</span>
               <span>{data.cnic}</span>
             </div>
             <div className="flex gap-2">
