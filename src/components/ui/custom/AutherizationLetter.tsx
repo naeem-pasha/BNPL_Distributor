@@ -61,9 +61,9 @@ export default function DeliveryAuthorization({
             Authorization to Deliver the Bike
           </h3>
           <p className="text-gray-600 mb-4">
-            It is to inform you that MBL after purchasing a bike from Atlas sold
-            it to one of its customer. After reviewing the details mentioned
-            below, kindly handover this bike to this customer.
+            It is to inform you that MBL, after purchasing a bike from Atlas,
+            sold it to one of its customer. After reviewing the details
+            mentioned below, kindly handover this bike to this customer.
           </p>
         </div>
 
