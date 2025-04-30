@@ -118,7 +118,6 @@ export default function DeliveryAuthorization({
         {/* Footer Section */}
         <div className="mt-8 border-t-2 pt-4">
           <div className="text-right">
-            <p className="font-semibold">For and on behalf of</p>
             <p className="text-lg font-bold text-gray-700">
               Meezan Bank Limited
             </p>
